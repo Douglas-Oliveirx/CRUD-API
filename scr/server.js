@@ -1,13 +1,10 @@
-const express = require('express')
+const express = require('express');
+const AuthController = require('./controllers/AuthController')
 const app = express()
 
-app.get('/', (req, resp)=>{
-    //resp.send("Hello World!")
-    resp.json({
-        error: false,
-        message: 'Sucesso!'
-    })
-})
+app.use(express.json())
+
+app.use("/auth", AuthController)
 
 app.listen(3000, ()=>{
     console.log('Servidor ativo!')
