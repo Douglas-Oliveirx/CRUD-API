@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const DB_ATLAS_URL = ''
 
-
-
 mongoose.connect(DB_ATLAS_URL,{},)
     .then(()=>{
         console.log("Conectado com sucesso!");
